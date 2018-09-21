@@ -1,0 +1,509 @@
+*
+	outline: none
+	box-sizing: border-box
+
+body
+	font: 16px/1.88 'Raleway', sans-serif
+	color: #000000
+h1
+	margin: 20px 0
+	font: 700 29px/43px 'Raleway', sans-serif
+	color: #23334d
+h2
+	margin: 15px 0
+	text-align: center
+	font: 700 27px/43px 'Raleway', sans-serif
+	color: #3e3e3e
+
+p
+	margin: 30px 0
+
+a
+	text-decoration: none
+
+.hidden
+	display: none!important
+
+.text-center
+	text-align: center
+
+.clearfix
+	&:after, &:before
+		display: table
+		content: ' '
+	&:after
+		clear: both
+
+/*for-img*/
+.for-img
+	text-align: center
+	overflow: hidden
+img
+	max-width: 100%
+	max-height: 100%
+	height: auto
+
+/*contain-img*/
+.contain-img
+	position: relative
+	display: block
+	overflow: hidden
+	&:before
+		display: block
+		content: ''
+	.image
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		max-width: 100%
+		max-height: 100%
+		height: auto
+
+/*btn*/
+.btn
+	display: inline-block
+	min-width: 180px
+	min-height: 44px
+	padding: 11px 10px 13px 10px
+	background-color: #455fe8
+	box-shadow: 0 8px 14px 0 rgba(216, 221, 230, 0.5)
+	border: solid 1px transparent
+	border-radius: 2px
+	text-align: center
+	font: 500 15px/18px 'Raleway', sans-serif
+	color: #ffffff
+	cursor: pointer
+	transition: all .3s
+	&:hover
+		background-color: #3a53da
+		box-shadow: 0 8px 14px 0 rgba(216, 221, 230, 0.51)
+.btn_green
+	background-color: #3fbb6a
+	border: solid 1px #3fbb6a
+	&:hover
+		background-color: #35af5f
+.btn_transparent
+	background-color: transparent
+	color: #455fe8
+	box-shadow: none
+	&:hover
+		background-color: transparent
+		border: solid 1px #455fe8
+		box-shadow: none
+.btn-outline
+	background-color: transparent
+	border: 1px solid #29325b
+	box-shadow: 0 8px 14px 0 rgba(216, 221, 230, 0.5)
+	color: #29325b
+	&:hover
+		background-color: #29325b
+		border-color: #29325b
+		box-shadow: 0 8px 14px 0 rgba(216, 221, 230, 0.5)
+		color: #ffffff
+.btn_lg
+	min-width: 207px
+
+/*FORM*/
+.form-group
+	position: relative
+	margin-bottom: 24px
+.form-text
+	display: block
+	width: 100%
+	height: 55px
+	padding: 14px 20px
+	border: 1px solid #d9dae2
+	border-radius: 2px
+	font: 18px/23px 'Source Sans Pro', sans-serif
+	color: #212a55
+.form-text::-webkit-input-placeholder
+	color: #d9dae2
+.form-text::-moz-placeholder
+	color: #d9dae2
+.form-text:-moz-placeholder
+	color: #d9dae2
+.form-text:-ms-input-placeholder
+	color: #d9dae2
+
+.form-text:focus
+	border-color: #b1b1b1
+.form-text.error
+	border-color: #ee7373
+.form-group_icon
+	.form-text
+		padding-left: 69px
+	.form-text:focus ~ .form-icon
+		border-right-color: #b1b1b1
+	.form-text.error ~ .form-icon
+		border-right-color: #ee7373
+	.form-icon
+		position: absolute
+		left: 4px
+		top: 50%
+		transform: translateY(-50%)
+		display: block
+		width: 46px
+		height: 37px
+		border-right: 1px solid #d9dae2
+textarea
+	min-height: 161px
+	resize: none
+.tooltip
+	position: absolute
+	top: 100%
+	left: 0
+	display: none
+	width: 100%
+	margin-top: 11px
+	padding: 10px 19px
+	border-radius: 2px
+	background-color: #f5f5f5
+	font: 16px/20px 'Source Sans Pro', sans-serif
+	color: #ee7373
+	z-index: 10
+	&:before
+		position: absolute
+		top: 0
+		left: 18px
+		display: block
+		content: ''
+		width: 0
+		height: 0
+		margin-top: -11px
+		border-bottom: 11px solid #f5f5f5
+		border-left: 10.5px solid transparent
+		border-right: 10.5px solid transparent
+.form-file
+	position: relative
+	display: flex
+	justify-content: space-between
+	align-items: center
+	font: 18px/23px 'Source Sans Pro', sans-serif
+	color: #707070
+	input[type="file"]
+		position: absolute
+		opacity: 0
+		width: 0
+		height: 0
+	.form-file-btn
+		display: inline-block
+		margin-left: 5px
+		padding: 11px 18px 11px 42px
+		background: transparent url(../img/download.svg) no-repeat left 17px center
+		border: solid 1px #aab8fc
+		border-radius: 2px
+		font: 500 15px/16px 'Raleway', sans-serif
+		color: #aab8fc
+		cursor: pointer
+		transition: all .3s
+		&:hover
+			background: #aab8fc url(../img/download-white.svg) no-repeat left 17px center
+			color: #ffffff
+
+/*MAIN*/
+.wrapper
+	display: flex
+	flex-direction: column
+	width: 100%
+	min-width: 1024px
+	min-height: 100vh
+	background: #fff
+
+.content-wrapper
+	position: relative
+	flex: 1 1 auto
+	overflow: hidden
+
+
+.container
+	position: relative
+	width: 100%
+	max-width: 1400px
+	margin: 0 auto
+	padding: 0 40px
+
+/*HEADER*/
+.header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	background: #ffffff
+	box-shadow: 0 5px 35px 5px rgba(239, 239, 239, 0.05)
+	z-index: 90
+.header-inner
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.burger-menu
+	display: none
+	position: relative
+	width: 48px
+	height: 34px
+	cursor: pointer
+	z-index: 100
+	span 
+		position: absolute
+		left: 0
+		width: 100%
+		height: 4px
+		background: #212a55
+		border-radius: 2px
+		transition: all .3s
+		&:first-child
+			top: 0
+		&:nth-child(2),
+		&:nth-child(3) 
+			top: 15px
+		&:last-child 
+			top: 30px
+.burger-menu.active 
+	span 
+		&:first-child 
+			top: 18px
+			width: 0%
+			left: 50%
+		&:nth-child(2) 
+			transform: rotate(45deg)
+		&:nth-child(3)
+			transform: rotate(-45deg)
+		&:last-child 
+			top: 18px
+			width: 0%
+			left: 50%
+
+.header-left
+	flex: 0 0 166px 
+	width: 166px
+	margin-right: 43px
+.header-logo img
+	display: block
+.header-phone
+	position: relative
+	display: inline-block
+	padding-left: 34px
+	font: 700 20px/25px 'Source Sans Pro', sans-serif
+	color: #455fe8
+	&:before
+		position: absolute
+		left: 0
+		top: 50%	
+		transform: translateY(-50%)
+		display: block
+		content: ''
+		width: 20px
+		height: 20px
+		background: url(../img/phone-icon.svg) no-repeat center
+
+.header-center
+	flex: 1 1 100%
+	display: flex
+	align-items: center
+	justify-content: space-between
+.nav-list
+	display: flex
+.nav-item
+	position: relative
+	display: block
+	margin: 0 20px
+.nav-link
+	display: block
+	width: 100%
+	padding: 32px 13px 31px
+	font: 500 15px/17px 'Raleway', sans-serif
+	color: #3e3e3e
+.sec-menu
+	position: absolute
+	top: 100%
+	left: 0
+	visibility: hidden
+	opacity: 0
+	display: block
+	min-width: 383px
+	background-color: #ffffff
+	box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05)
+	border: solid 1px #e4e4e4
+	transition: all .3s
+	z-index: 100
+	&:before, &:after
+		position: absolute
+		left: 20px
+		display: block
+		content: ''
+		width: 0
+		height: 0
+		border-left: 9px solid transparent
+		border-right: 9px solid transparent
+	&:before
+		border-bottom: 10px solid #e4e4e4
+		top: -10px
+	&:after
+		border-bottom: 10px solid #ffffff
+		top: -9px
+.sec-menu-link
+	display: block
+	padding: 29px 30px 30px 29px
+	background-color: #ffffff
+	font: 500 18px/21px 'Raleway', sans-serif
+	color:  #3e3e3e
+	transition: all .3s
+	&:hover
+		background-color: #f8f9fd
+.has-child
+	.nav-link
+		position: relative
+		&:after
+			position: absolute
+			top: 50%
+			right: 0
+			display: block
+			content: ''
+			width: 8px
+			height: 4px
+			margin-top: -2px
+			background: #cccccc
+			transition: all .3s
+.has-child:hover
+	.nav-link:after
+		transform: rotate(180deg)
+	.sec-menu
+		visibility: visible
+		opacity: 1
+
+.header-right
+	margin-left: 20px
+
+
+/*BUNNER*/
+.bunner
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	padding: 167px 0 82px 0
+	min-height: 583px
+	background: #fdfdfd url(../img/hero.svg) no-repeat top right
+	font: 19px/24px 'Source Sans Pro', sans-serif
+	color: #3e3e3e
+	.container
+		height: 100%
+	li
+		margin-bottom: 11px
+.bunner-inner
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	height: 100%
+.btn-wrap
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	margin: 30px 0
+	.btn
+		margin-right: 20px
+
+/*TYPE*/
+.section-type
+	padding: 14px 0 32px
+	background-color: #f8f9fd
+	h2
+		margin: 15px 0 21px	
+.type-grid
+	width: 100%
+	max-width: 1170px
+	margin: 0 auto
+.type-row
+	display: flex
+	justify-content: center
+	margin: 0 -30px
+.type-col
+	display: flex
+	width: 33.33%
+	padding: 0 30px
+.type-item
+	margin-bottom: 40px
+	padding: 52px 25px 42px 31px
+	background-color: #ffffff
+	box-shadow: 0 8px 14px 0 rgba(224, 229, 238, 0.5)
+	letter-spacing: .5px
+.type-header
+	display: flex
+	align-items: center
+	margin-bottom: 11px
+	font: 600 21px/25px 'Raleway', sans-serif
+	color: #455fe8
+	letter-spacing: -.1px
+.type-title
+	flex: 1 1 auto
+.type-icon
+	flex: 0 0 32px
+.btn-action
+	margin-bottom: 20px
+	text-align: center
+
+/*TESTIMONIALS*/
+.section-testimonials
+	padding: 25px 0 28px
+	h2
+		margin-bottom: 35px
+.testimonials-row
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	margin: 0 -10px 21px
+.testimonials-col
+	width: 33.33%
+	padding: 0 10px
+.testimonials-item
+	margin-bottom: 20px
+	padding: 88px 30px 31px 30px
+	border: solid 1px #e4e4e4
+.testimonials-body
+	margin-bottom: 19px
+.testimonials-info
+	text-align: center
+.testimonials-author
+	font: 700 20px/24px 'Raleway', sans-serif
+.testimonials-date
+	font: 15px/25px 'Source Sans Pro', sans-serif
+	color: #212a55
+.testimonials-rating
+	height: 15px
+	margin: 8px 0
+	background-color: #ccc
+
+/*PARTNERS*/
+.partners
+	padding: 32px 0 33px
+	background-color: rgba(173,187,253,.55)
+.partners-inner
+	display: flex
+	align-items: center
+	justify-content: space-around
+.partner
+	padding: 10px
+
+/*CALLBACK*/
+.callback
+	padding: 70px 0
+	h2
+		margin-bottom: 30px
+	form
+		display: block
+		width: 100%
+		max-width: 300px
+		margin: 0 auto
+.callback-inner
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	padding: 0 46px
+.form-wrap
+	width: 100%
+	max-width: 654px
+	padding: 21px 10px 10px 10px
+	border: solid 1px rgba(33, 42, 85, 0.17)
