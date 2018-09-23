@@ -203,10 +203,10 @@ textarea
 
 /*MAIN*/
 .wrapper
+	position: relative
 	display: flex
 	flex-direction: column
 	width: 100%
-	min-width: 1024px
 	min-height: 100vh
 	background: #fff
 
@@ -243,7 +243,7 @@ textarea
 	width: 48px
 	height: 34px
 	cursor: pointer
-	z-index: 100
+	z-index: 130
 	span 
 		position: absolute
 		left: 0
@@ -297,8 +297,10 @@ textarea
 		height: 20px
 		background: url(../img/phone-icon.svg) no-repeat center
 
-.header-center
+.header-center-outer
 	flex: 1 1 100%
+.header-center
+	width: 100%
 	display: flex
 	align-items: center
 	justify-content: space-between
@@ -374,7 +376,8 @@ textarea
 
 .header-right
 	margin-left: 20px
-
+.header-tablet
+	display: none
 
 /*BUNNER*/
 .bunner
@@ -486,7 +489,7 @@ textarea
 
 /*CALLBACK*/
 .callback
-	padding: 70px 0
+	padding: 70px 0 15px
 	h2
 		margin-bottom: 30px
 	form
@@ -505,5 +508,100 @@ textarea
 .form-wrap
 	width: 100%
 	max-width: 654px
-	padding: 21px 10px 10px 10px
+	padding: 21px 10px 26px 10px
 	border: solid 1px rgba(33, 42, 85, 0.17)
+	.btn
+		margin-top: 17px
+
+/*FOOTER*/
+.footer
+	padding: 15px 0 30px
+	font: 16px/1.81 'Source Sans Pro', sans-serif
+	color: #000000
+	a
+		color: inherit
+.footer-inner
+	width: 100%
+	max-width: 485px
+	margin: 0 auto
+.contact-wrap
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	padding: 12px 0
+.contact-block
+	width: 50%
+	max-width: 208px
+.phone-list
+	position: relative
+	padding-left: 48px
+	&:before
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+		display: block
+		content: ''
+		width: 20px
+		height: 22px
+		background: transparent url(../img/phone-icon.svg) no-repeat center
+	li
+		margin: 1px 0
+.working-hour, .mail
+	position: relative
+	display: block
+	margin: 7px 0 23px
+	padding-left: 43px
+	&:before
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+		display: block
+		content: ''
+		width: 20px
+		height: 22px
+.working-hour:before
+	background: transparent url(../img/watch-icon.svg) no-repeat center
+.mail:before
+	background: transparent url(../img/mail-icon.svg) no-repeat center
+.social-wrap
+	display: flex
+	justify-content: space-around
+	flex-wrap: wrap
+.social-link
+	display: inline-block
+	margin: 0 10px
+	font-size: 0
+	line-height: 0
+
+/*POPUP*/
+.popup-overlay
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: rgba(112,112,112,.53)
+	z-index: 110
+	.popup
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		display: block
+		width: 90%
+		height: 90%
+		max-width: 654px
+		max-height: 708px
+		padding: 30px 20px 50px
+		background-color: #ffffff
+		overflow-y: auto
+	.form-wrap
+		max-width: 300px
+		margin: 0 auto
+		padding: 0
+	h2
+		margin-top: 0
+		color: #35af5f

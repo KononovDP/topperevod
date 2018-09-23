@@ -23,12 +23,23 @@ $(document).ready(function() {
 		}, 0);
 	};
 	
-	//object-fit polyfill
-	objectFitImages('.cover-img .image');
-
 	$('.burger-menu').on('click' , function() {
 		$(this).toggleClass('active');
+		$('.header-center-outer').toggleClass('visible');
+
 	});
 	
+	$('.show-popup').on('click' , function() {
+		lockBody();
+		$('.popup-overlay').fadeIn(300);
+		return false;
+	});
+
+	$(document).on('click' , 'body' , function(event) {
+		if ($(event.target).closest(".popup").length) return;
+		$(".popup-overlay").fadeOut(300);
+		unlockBody();
+		event.stopPropagation();
+	});
 
 }); 

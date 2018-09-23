@@ -30,39 +30,45 @@
 							<img src="img/logo.png" alt="">
 						</a>
 					</div>
-					<div class="header-center">
-						<a href="tel:984-38-29-99" class="header-phone">984-38-29-99</a>
-						<nav class="header-nav">
-							<ul class="nav-list">
-								<li class="nav-item has-child">
-									<a href="#" class="nav-link">Услуги</a>
-									<ul class="sec-menu">
-										<li><a href="#" class="sec-menu-link">Технический перевод</a></li>
-										<li><a href="#" class="sec-menu-link">Юридический перевод</a></li>
-										<li><a href="#" class="sec-menu-link">Письменный перевод</a></li>
-										<li><a href="#" class="sec-menu-link">Экономический перевод</a></li>
-									</ul>
-								</li>
-								<li class="nav-item has-child">
-									<a href="#" class="nav-link">Стоимость</a>
-									<ul class="sec-menu">
-										<li><a href="#" class="sec-menu-link">Перевод личных документов</a></li>
-										<li><a href="#" class="sec-menu-link">Письменные переводы</a></li>
-									</ul>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">О нас</a>
-								</li>
-								<li class="nav-item">
-									<a href="#" class="nav-link">Контакты</a>
-								</li>
-							</ul>
-						</nav>
+					<div class="header-center-outer">
+						<div class="header-center">
+							<a href="tel:984-38-29-99" class="header-phone">984-38-29-99</a>
+							<nav class="header-nav">
+								<ul class="nav-list">
+									<li class="nav-item has-child">
+										<a href="#" class="nav-link">Услуги</a>
+										<ul class="sec-menu">
+											<li><a href="#" class="sec-menu-link">Технический перевод</a></li>
+											<li><a href="#" class="sec-menu-link">Юридический перевод</a></li>
+											<li><a href="#" class="sec-menu-link">Письменный перевод</a></li>
+											<li><a href="#" class="sec-menu-link">Экономический перевод</a></li>
+										</ul>
+									</li>
+									<li class="nav-item has-child">
+										<a href="#" class="nav-link">Стоимость</a>
+										<ul class="sec-menu">
+											<li><a href="#" class="sec-menu-link">Перевод личных документов</a></li>
+											<li><a href="#" class="sec-menu-link">Письменные переводы</a></li>
+										</ul>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">О нас</a>
+									</li>
+									<li class="nav-item">
+										<a href="#" class="nav-link">Контакты</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
 					</div>
 					<div class="header-right">
-						<a href="#" class="btn">Заказать перевод</a>
+						<a href="#" class="btn show-popup">Заказать перевод</a>
 					</div>					
 				</div>
+			</div>
+			<div class="header-tablet">
+				<a href="tel:984-38-29-99" class="header-phone">984-38-29-99</a>
+				<button class="close">&nbsp;</button>
 			</div>
 		</header>
 		<!-- HEADER END -->
@@ -238,14 +244,75 @@
 		<footer class="footer">
 			<div class="container">
 				<div class="footer-inner">
+					<h2>Контакты</h2>
+					<div class="contact-wrap">
+						<div class="contact-block">
+							<ul class="phone-list">
+								<li><a href="tel:+38(095) 033-70-40" class="phone">+38(095) 033-70-40</a></li>
+								<li><a href="tel:+38(073) 033-70-40" class="phone">+38(073) 033-70-40</a></li>
+								<li><a href="tel:+38(098) 378-11-36" class="phone">+38(098) 378-11-36</a></li>
+							</ul>
+						</div>
+						<div class="contact-block">
+							<span class="working-hour">Пн - сб  9.00 - 19.00</span>
+							<a href="mailto:info@topperevod.com" class="mail">info@topperevod.com</a>
+						</div>
+					</div>
+					<div class="social-wrap">
+						<a href="#" class="social-link for-img"><img src="img/viber.svg" alt="viber"></a>
+						<a href="#" class="social-link for-img"><img src="img/facebook.svg" alt="facebook"></a>
+						<a href="#" class="social-link for-img"><img src="img/whatsapp.svg" alt="whatsapp"></a>
+						<a href="#" class="social-link for-img"><img src="img/telegram.svg" alt="telegram"></a>
+						<a href="#" class="social-link for-img"><img src="img/skype.svg" alt="skype"></a>
+					</div>
 				</div>
 			</div>
 		</footer>
 		<!-- FOOTER END -->	
-	</div>
 
+		<!-- POPUP -->
+		<div class="popup-overlay">
+			<div class="popup">
+				<div class="form-wrap">
+					<h2>Заказать перевод</h2>
+					<form>
+						<div class="form-group form-group_icon">
+							<input type="text" class="form-text" placeholder="Имя">
+							<span class="form-icon contain-img"><img class="image" src="img/user-icon.svg" alt=""></span>
+							<div class="tooltip">Invalid data</div>
+						</div>
+						<div class="form-group form-group_icon">
+							<input type="text" class="form-text" placeholder="Email">
+							<span class="form-icon contain-img"><img class="image" src="img/mail-icon-1.svg" alt=""></span>
+							<div class="tooltip">Invalid data</div>
+						</div>
+						<div class="form-group form-group_icon">
+							<input type="text" class="form-text" placeholder="Телефон">
+							<span class="form-icon contain-img"><img class="image" src="img/phone-icon-1.svg" alt=""></span>
+							<div class="tooltip">Invalid data</div>
+						</div>
+						<div class="form-group form-group-flex">
+							<label class="form-file">
+								<input type="file">
+								<span class="form-file-text">Прикрепите файл</span>
+								<span class="form-file-btn">Загрузить</span>
+							</label>
+						</div>
+						<div class="form-group">
+							<textarea class="form-text" placeholder="Комментарий"></textarea>
+							<div class="tooltip">Invalid data</div>
+						</div>
+						<div class="form-group text-center">
+							<button class="btn btn_green">Заказать</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- POPUP END -->
+	</div>
+	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="libs/object-fit-images/dist/ofi.browser.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>
