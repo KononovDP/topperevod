@@ -1,7 +1,7 @@
 $(document).ready(function() {
-
-	var scrollTop = $(window).scrollTop();
-
+	var scrollTop = $(window).scrollTop(),
+		windowWidth = $(window).width();
+	
 	//lock/unlock body scroll
 	function lockBody() {
 		if($(window).scrollTop()) {
@@ -22,11 +22,10 @@ $(document).ready(function() {
 			scrollTop = null;
 		}, 0);
 	};
-	
+
 	$('.burger-menu').on('click' , function() {
 		$(this).toggleClass('active');
-		$('.header-center-outer').toggleClass('visible');
-
+		$('.header-center').toggleClass('visible');
 	});
 	
 	$('.show-popup').on('click' , function() {

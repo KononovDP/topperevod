@@ -426,11 +426,11 @@ textarea {
   background: url(../img/phone-icon.svg) no-repeat center;
 }
 
-.header-center-outer {
+.header-center {
   flex: 1 1 100%;
 }
 
-.header-center {
+.header-center-inner {
   width: 100%;
   display: flex;
   align-items: center;
@@ -512,7 +512,7 @@ textarea {
   width: 8px;
   height: 4px;
   margin-top: -2px;
-  background: #cccccc;
+  background: url(../img/arrow.svg) no-repeat center;
   transition: all 0.3s;
 }
 
@@ -647,6 +647,8 @@ textarea {
 .testimonials-item {
   margin-bottom: 20px;
   padding: 88px 30px 31px 30px;
+  background: #fff url(../img/quote.png) no-repeat center top 38px;
+  background-size: 26px;
   border: solid 1px #e4e4e4;
 }
 
@@ -869,7 +871,7 @@ textarea {
     margin: 0 auto;
   }
 
-  .header-center-outer {
+  .header-center {
     position: fixed;
     top: 0;
     left: 0;
@@ -883,25 +885,26 @@ textarea {
     border: solid 1px #e4e4e4;
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
     transition: all 0.3s;
-    overflow-y: auto;
     z-index: 120;
   }
-  .header-center-outer .header-phone {
+  .header-center .header-phone {
     margin: 20px 30px 50px 37px;
     font-size: 23px;
     line-height: 25px;
   }
 
-  .header-center-outer.visible {
+  .header-center.visible {
     transform: translateX(0);
     transition: all 0.3s;
   }
 
-  .header-center {
+  .header-center-inner {
     display: flex;
     flex-direction: column-reverse;
     align-items: flex-start;
+    max-height: calc(100vh - 97px);
     border-top: solid 1px #e4e4e4;
+    overflow-y: auto;
   }
 
   .header-nav {
@@ -925,7 +928,11 @@ textarea {
   }
 
   .has-child .nav-link:after {
-    right: 40px;
+    position: static;
+    display: inline-block;
+    width: 12px;
+    height: 7px;
+    margin: 3px 0 3px 10px;
   }
 
   .sec-menu {
