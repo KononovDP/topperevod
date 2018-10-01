@@ -319,7 +319,8 @@ textarea {
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  background: #fff;
+  background: #fff url(../img/wrapper-bg.png) no-repeat center bottom 20px;
+  background-size: 100%;
 }
 
 .content-wrapper {
@@ -405,6 +406,9 @@ textarea {
 
 .header-logo img {
   display: block;
+}
+.header-logo .m-logo {
+  display: none;
 }
 
 .header-phone {
@@ -672,7 +676,7 @@ textarea {
 .testimonials-rating {
   height: 15px;
   margin: 8px 0;
-  background-color: #ccc;
+  background: url(../img/stars.svg) no-repeat center;
 }
 
 /*PARTNERS */
@@ -694,6 +698,7 @@ textarea {
 /*CALLBACK */
 .callback {
   padding: 70px 0 15px;
+  background: url(../img/callcenter_guy.svg) no-repeat left center;
 }
 .callback h2 {
   margin-bottom: 30px;
@@ -727,7 +732,7 @@ textarea {
 
 /*FOOTER */
 .footer {
-  padding: 15px 0 30px;
+  padding: 15px 0 275px;
   font: 16px/1.81 "Source Sans Pro", sans-serif;
   color: #000000;
 }
@@ -831,7 +836,7 @@ textarea {
   height: 90%;
   max-width: 654px;
   max-height: 708px;
-  padding: 30px 20px 50px;
+  padding: 30px 20px 30px;
   background-color: #ffffff;
   overflow-y: auto;
 }
@@ -839,6 +844,7 @@ textarea {
   max-width: 300px;
   margin: 0 auto;
   padding: 0;
+  border: none;
 }
 .popup-overlay h2 {
   margin-top: 0;
@@ -983,14 +989,16 @@ textarea {
     height: 42px;
     border: none;
     border-radius: 50%;
-    background: #f8f9fd url(../img/watch-icon.svg) no-repeat center;
+    background: #f8f9fd url(../img/close.png) no-repeat center;
+    background-size: 15px;
     cursor: pointer;
   }
 
   /*BUNNER */
   .bunner {
-    padding: 180px 0 15px 0;
     min-height: 569px;
+    padding: 180px 0 15px 0;
+    background: url(../img/t-bunner-2.png) no-repeat right 15% bottom 8%, url(../img/t-bunner-1.png) no-repeat right bottom;
   }
 
   /*TYPE */
@@ -1040,6 +1048,7 @@ textarea {
   /*CALLBACK */
   .callback {
     padding: 40px 0 15px;
+    background: url(../img/t-callcenter_guy.png) no-repeat left top 64px;
   }
 
   .callback-inner {
@@ -1051,7 +1060,237 @@ textarea {
   }
 }
 @media screen and (max-width: 767px) {
+  .wrapper {
+    background: #fff url(../img/m-wrapper-bg.png) no-repeat center bottom 20px;
+    background-size: 100%;
+  }
+
   .container {
-    padding: 0 22px;
+    padding: 0 20px;
+  }
+
+  /*header */
+  .header {
+    padding: 18px 0 19px;
+  }
+
+  .burger-menu {
+    width: 27px;
+    height: 19px;
+    margin-right: 20px;
+  }
+  .burger-menu span {
+    height: 2px;
+    border-radius: 1px;
+  }
+  .burger-menu span:nth-child(2), .burger-menu span:nth-child(3) {
+    top: 9px;
+  }
+  .burger-menu span:last-child {
+    top: 17px;
+  }
+
+  .header-left {
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  .header-logo .d-logo {
+    display: none;
+  }
+  .header-logo .m-logo {
+    display: block;
+  }
+
+  .header-right .btn {
+    min-width: 121px;
+    min-height: 29px;
+    padding: 7px 6px 7px 6px;
+    font: 500 12px/14px "Raleway", sans-serif;
+  }
+
+  .header-tablet {
+    padding: 14px 20px 15px;
+    background-color: #fdfdfd;
+  }
+  .header-tablet .header-phone {
+    padding-left: 30px;
+    font: 700 16px/25px "Source Sans Pro", sans-serif;
+  }
+  .header-tablet .close {
+    width: 30px;
+    height: 30px;
+    background-size: 10px;
+  }
+
+  /*BUNNER */
+  h1 {
+    margin: 10px 0;
+    font-size: 23px;
+    line-height: 1.57;
+  }
+
+  .bunner {
+    min-height: 600px;
+    padding: 139px 0 214px 0;
+    background: url(../img/m-bunner.png) no-repeat right bottom 40px;
+    text-align: center;
+    font: 17px/22px "Source Sans Pro", sans-serif;
+  }
+  .bunner li {
+    margin-bottom: 13px;
+  }
+  .bunner .btn_transparent {
+    border: solid 1px #455fe8;
+  }
+
+  .bunner-inner {
+    justify-content: center;
+  }
+
+  .btn-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-wrap .btn {
+    margin: 0 0 20px 0;
+  }
+
+  /*TYPE */
+  .section-type h2 {
+    margin: 15px 0 18px;
+  }
+  .section-type .btn-action {
+    margin-top: 0;
+  }
+
+  .type-col {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .type-item {
+    margin-bottom: 20px;
+    padding: 52px 16px 42px 16px;
+  }
+
+  /*TESTIMONIALS */
+  .section-testimonials {
+    padding: 8px 0 10px;
+  }
+  .section-testimonials h2 {
+    margin-bottom: 12px;
+  }
+
+  .testimonials-row {
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+
+  .testimonials-col {
+    width: 100%;
+    max-width: 500px;
+    padding: 0 20px;
+  }
+
+  .testimonials-item {
+    padding: 88px 12px 31px 12px;
+  }
+
+  /*PARTNERS */
+  .partners {
+    padding: 10px 0;
+  }
+
+  .partners-inner {
+    flex-wrap: wrap;
+  }
+  .partners-inner .partner {
+    width: 50%;
+  }
+
+  /*CALLBACK */
+  .callback {
+    padding: 23px 0 154px;
+    background: url(../img/m-callcenter_guy.png) no-repeat left bottom;
+  }
+  .callback h2 {
+    margin-bottom: 38px;
+    font: 700 22px/26px "Raleway", sans-serif;
+  }
+  .callback form {
+    max-width: 500px;
+  }
+
+  .callback-inner {
+    padding: 0;
+  }
+
+  .form-wrap {
+    padding: 0;
+  }
+  .form-wrap .btn {
+    min-width: 218px;
+    min-height: 53px;
+    margin-top: -4px;
+    padding: 11px 10px 13px 10px;
+    font: 500 18px/21px "Raleway", sans-serif;
+  }
+
+  .contact-wrap {
+    flex-wrap: wrap;
+  }
+
+  .contact-block {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 479px) {
+  .wrapper {
+    background: #fff url(../img/m-wrapper-bg.png) no-repeat center bottom 65px;
+    background-size: 100%;
+  }
+
+  .footer {
+    padding-bottom: 90px;
+  }
+
+  .contact-wrap {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+
+  .phone-list {
+    padding: 35px 0 0 0;
+  }
+  .phone-list.phone-list:before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+  .phone-list li {
+    margin: 0 0 8px 0;
+  }
+
+  .working-hour, .mail {
+    margin: 13px 0 0 0;
+    padding: 28px 0 0 0;
+  }
+
+  .working-hour:before, .mail:before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+  }
+
+  .social-wrap {
+    justify-content: center;
+    padding: 15px 25px;
+  }
+
+  .social-link {
+    margin: 15px 25px 20px;
   }
 }

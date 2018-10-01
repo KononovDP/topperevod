@@ -208,7 +208,8 @@ textarea
 	flex-direction: column
 	width: 100%
 	min-height: 100vh
-	background: #fff
+	background: #fff url(../img/wrapper-bg.png) no-repeat center bottom 20px
+	background-size: 100%
 
 .content-wrapper
 	position: relative
@@ -278,8 +279,11 @@ textarea
 	flex: 0 0 166px 
 	width: 166px
 	margin-right: 43px
-.header-logo img
-	display: block
+.header-logo 
+	img
+		display: block
+	.m-logo
+		display: none
 .header-phone
 	position: relative
 	display: inline-block
@@ -476,7 +480,7 @@ textarea
 .testimonials-rating
 	height: 15px
 	margin: 8px 0
-	background-color: #ccc
+	background: url(../img/stars.svg) no-repeat center
 
 /*PARTNERS*/
 .partners
@@ -492,6 +496,7 @@ textarea
 /*CALLBACK*/
 .callback
 	padding: 70px 0 15px
+	background: url(../img/callcenter_guy.svg) no-repeat left center
 	h2
 		margin-bottom: 30px
 	form
@@ -517,7 +522,7 @@ textarea
 
 /*FOOTER*/
 .footer
-	padding: 15px 0 30px
+	padding: 15px 0 275px
 	font: 16px/1.81 'Source Sans Pro', sans-serif
 	color: #000000
 	a
@@ -597,13 +602,14 @@ textarea
 		height: 90%
 		max-width: 654px
 		max-height: 708px
-		padding: 30px 20px 50px
+		padding: 30px 20px 30px
 		background-color: #ffffff
 		overflow-y: auto
 	.form-wrap
 		max-width: 300px
 		margin: 0 auto
 		padding: 0
+		border: none
 	h2
 		margin-top: 0
 		color: #35af5f
