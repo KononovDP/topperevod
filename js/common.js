@@ -41,4 +41,30 @@ $(document).ready(function() {
 		event.stopPropagation();
 	});
 
+	if(windowWidth <= 1024) {
+		$('.has-child .nav-link').click(function(e) {
+			e.preventDefault();
+			
+			var $this = $(this);
+			
+			if ($this.next('.sec-menu').hasClass('show')) {
+				$this.removeClass('active');
+				$this.next('.sec-menu').removeClass('show');
+				$this.next('.sec-menu').slideUp(300);
+			} else {
+				$('.has-child .nav-link').removeClass('active');
+			    $('.sec-menu').removeClass('show');
+			    $('.sec-menu').slideUp(300);
+				$this.addClass('active');
+			    $this.next('.sec-menu').toggleClass('show');
+			    $this.next('.sec-menu').slideToggle(300);
+			}
+		});
+	};
+
+	$('.header-tablet .close').on('click' , function() {
+		$(this).closest('.header-tablet').slideUp(300);
+		return false;
+	});
 }); 
+

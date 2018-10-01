@@ -32,7 +32,7 @@
 		transition: all .3s
 		z-index: 120
 		.header-phone
-			margin: 20px 30px 50px 37px
+			margin: 20px 30px 35px 37px
 			font-size: 23px
 			line-height: 25px
 	.header-center.visible
@@ -52,9 +52,9 @@
 	.nav-item
 		margin: 0
 	.nav-link 
-		padding: 30px 37px 29px
+		padding: 25px 37px 24px
 		font: 500 18px/21px "Raleway", sans-serif
-		&:hover
+		&.active
 			background-color: #f8f9fd
 	.has-child .nav-link:after
 		position: static
@@ -73,13 +73,14 @@
 		background-color: #f8f9fd
 		border: none
 		box-shadow: none
+		transition: none
 	.sec-menu:before, .sec-menu:after
 		display: none
 	.sec-menu-link 
 		padding: 29px 30px 30px 67px
-		background-color: transparent 
-	.has-child:hover .sec-menu
-		display: block
+		background-color: transparent
+	.has-child:hover .nav-link:after
+		transform: none 
 
 
 	.header-tablet

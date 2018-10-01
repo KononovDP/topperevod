@@ -888,7 +888,7 @@ textarea {
     z-index: 120;
   }
   .header-center .header-phone {
-    margin: 20px 30px 50px 37px;
+    margin: 20px 30px 35px 37px;
     font-size: 23px;
     line-height: 25px;
   }
@@ -920,10 +920,10 @@ textarea {
   }
 
   .nav-link {
-    padding: 30px 37px 29px;
+    padding: 25px 37px 24px;
     font: 500 18px/21px "Raleway", sans-serif;
   }
-  .nav-link:hover {
+  .nav-link.active {
     background-color: #f8f9fd;
   }
 
@@ -946,6 +946,7 @@ textarea {
     background-color: #f8f9fd;
     border: none;
     box-shadow: none;
+    transition: none;
   }
 
   .sec-menu:before, .sec-menu:after {
@@ -957,8 +958,8 @@ textarea {
     background-color: transparent;
   }
 
-  .has-child:hover .sec-menu {
-    display: block;
+  .has-child:hover .nav-link:after {
+    transform: none;
   }
 
   .header-tablet {
